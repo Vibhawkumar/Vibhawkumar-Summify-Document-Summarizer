@@ -1,5 +1,5 @@
 
-Summify-Document-Summarizer - Gemini LLM
+## Summify-Document-Summarizer - Gemini LLM
 
 
 This project implements Google's Gemini LLM to automatically generate concise summaries of large PDF documents. The goal is to provide an efficient way to extract key insights from lengthy files, making it ideal for research, professional reports, and legal documents.
