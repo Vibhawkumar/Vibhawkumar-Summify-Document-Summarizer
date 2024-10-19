@@ -59,7 +59,7 @@ def main():
         save(uploaded_pdf)
         # ------------------------------File Saving Done ----------------------------------------------
 
-        # ------------------------ Loading/ Splitting in shunks/ Generate Emebeddings----------------- 
+        # ------------------------ Loading/ Splitting in chunks/ Generate Emebeddings----------------- 
         loader = PyPDFDirectoryLoader("D:\\vs_code_projects\\PDF_Langchain\\pdfs")
         loader = PdfReader(uploaded_pdf)
         data = loader.load_and_split()
