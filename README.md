@@ -11,6 +11,6 @@ This project implements Google's Gemini LLM to automatically generate concise su
 
 2) Supports large documents: The model is capable of handling up to 1 million tokens, allowing it to summarize extensive content such as books, research papers, and long legal documents.
 
-3) Multimodal capabilities: Although focused on PDFs for this implementation, Gemini is also optimized for handling various other data types like text, video, and code.
+3) Multimodel capabilities: Although focused on PDFs for this implementation, Gemini is also optimized for handling various other data types like text, video, and code.
 
 4) In-context learning: The model adapts to new tasks with in-context examples, without needing further training.
