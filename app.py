@@ -9,13 +9,9 @@ from langchain_community.vectorstores import Chroma
 from chromadb.config import Settings
 persist_directory = "./chroma_db"  # Create a folder for persistence
 chroma_client = Chroma(persist_directory=persist_directory)
-
 from chromadb import Client
 chroma_client = Client(tenant="default_tenant", database="default_database")
-
-
 from langchain_community.embeddings import OpenAIEmbeddings
-
 from PyPDF2 import PdfReader
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
