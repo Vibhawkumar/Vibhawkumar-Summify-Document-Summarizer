@@ -21,7 +21,8 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 st.set_page_config(page_title="Chat with PDFs 🥳", initial_sidebar_state="expanded")
-st.header("Chat with PDFs 🥳")
+st.markdown("<h1 style='text-align: center;'>Summify</h1>", unsafe_allow_html=True)
+
 
 # Define the prompt template
 prompt_template = """
@@ -89,7 +90,7 @@ def queries(question, vector_index):
     docs = vector_index.get_relevant_documents(question)
 
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
-    model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.8)
+    model = ChatGoogleGenerativeAI(model="models/gemini-2.0-flash", temperature=0.8)
     chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
 
     response = chain({"input_documents": docs, "question": question}, return_only_outputs=True)
@@ -103,7 +104,7 @@ def main():
         st.session_state["vector_index"] = vector_index  # Store for later queries
 
     question = st.text_input("Your Question", key="input")
-    submit = st.button("Ask Question 🤔")
+    submit = st.button("Get Answer")
 
     if submit:
         if "vector_index" in st.session_state:
